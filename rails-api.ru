@@ -1,7 +1,9 @@
 require File.expand_path('../config/environment.rb', __FILE__)
-Bundler.setup(:default, :rails)
+Bundler.setup(:default, 'rails-api')
 
-require 'rails/all'
+require 'active_record/railtie'
+require 'action_controller/railtie'
+require 'rails-api'
 
 class Wiggles < Rails::Application
   routes.append do
@@ -16,28 +18,20 @@ class Wiggles < Rails::Application
   config.secret_key_base = 'not_so_secret_key_base'
 end
 
-class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
-end
-
-class WigglesController < ApplicationController
-  respond_to :json
-
+class WigglesController < ActionController::API
   # GET /wiggles.json
   def index
-    respond_with Wiggle.all
+    render json: Wiggle.all
   end
 
   # GET /wiggles/:id.json
   def show
-    respond_with Wiggle.find(params[:id])
+    render json: Wiggle.find(params[:id])
   end
 
   # GET /wiggles/:id/comments.json
   def comments
-    respond_with Wiggle.find(params[:id]).comments
+    render json: Wiggle.find(params[:id]).comments
   end
 end
 

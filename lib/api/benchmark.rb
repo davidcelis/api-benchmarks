@@ -14,10 +14,11 @@ module API
       puts "Benchmarking #{@frameworks.first.pretty}..." unless @frameworks.size > 1
 
       PATHS.each do |path|
+        puts "\n### `#{path.sub(/\d+/, ':id')}`"
+        
         table = API::Benchmark::Table.new
 
         @frameworks.each do |framework|
-          puts "\n### `#{path.sub(/\d+/, ':id')}`"
           framework.benchmark!(path: path, report: table)
         end
 

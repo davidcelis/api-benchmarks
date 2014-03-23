@@ -14,3 +14,4 @@ gem 'pry'
 
 # Frameworks.
 gem 'rails', '4.0.4', group: :rails
+gem 'rails-api', '0.2.0', group: 'rails-api'
