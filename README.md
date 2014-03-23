@@ -59,21 +59,27 @@ Note: _I've ordered results by what I believe is the more important metric: Requ
 
 ### `/wiggles`
 
-| Framework      | Requests | Response Time | Requests/sec |
-|----------------|----------|---------------|--------------|
-| [Rails][rails] |      969 |      103.18ms |        96.86 |
+| Framework                   | Requests | Response Time | Requests/sec |
+|-----------------------------|----------|---------------|--------------|
+| [Rails::API][rails-api]     |     1026 |       48.58ms |       102.58 |
+| [Rails::Metal][rails-metal] |     1108 |       90.64ms |       110.79 |
+| [Rails][rails]              |      952 |      105.89ms |        95.16 |
 
 ### `/wiggles/:id`
 
-| Framework      | Requests | Response Time | Requests/sec |
-|----------------|----------|---------------|--------------|
-| [Rails][rails] |     4146 |       24.24ms |       414.56 |
+| Framework                   | Requests | Response Time | Requests/sec |
+|-----------------------------|----------|---------------|--------------|
+| [Rails::API][rails-api]     |     4613 |       21.69ms |       461.24 |
+| [Rails::Metal][rails-metal] |     6223 |       15.95ms |       621.97 |
+| [Rails][rails]              |     3999 |       24.73ms |       399.82 |
 
 ### `/wiggles/:id/comments`
 
-| Framework      | Requests | Response Time | Requests/sec |
-|----------------|----------|---------------|--------------|
-| [Rails][rails] |     1814 |       53.88ms |       181.38 |
+| Framework                   | Requests | Response Time | Requests/sec |
+|-----------------------------|----------|---------------|--------------|
+| [Rails::API][rails-api]     |     1926 |       52.40ms |       192.57 |
+| [Rails::Metal][rails-metal] |     2231 |       44.44ms |       223.07 |
+| [Rails][rails]              |     1738 |       59.30ms |       173.78 |
 
 ### System Information
 
