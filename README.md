@@ -61,31 +61,34 @@ Note: _I've ordered results by what I believe is the more important metric: Requ
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Sinatra][sinatra]          | 1102     | 91.08ms       | 110.18       |
-| [Rails::API][rails-api]     | 992      | 99.65ms       | 99.17        |
-| [Rails][rails]              | 930      | 105.19ms      | 92.97        |
-| [Grape][grape]              | 886      | 112.66ms      | 88.57        |
-| [Rails::Metal][rails-metal] | 857      | 116.56ms      | 85.69        |
+| [Crepe][crepe]              | 1339     | 69.56ms       | 133.86       |
+| [Grape][grape]              | 1152     | 85.36ms       | 115.17       |
+| [Sinatra][sinatra]          | 1150     | 62.16ms       | 114.98       |
+| [Rails::Metal][rails-metal] | 1105     | 90.26ms       | 110.46       |
+| [Rails::API][rails-api]     | 996      | 97.25ms       | 99.57        |
+| [Rails][rails]              | 951      | 103.53ms      | 95.08        |
 
 ### `/wiggles/:id`
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Sinatra][sinatra]          | 7915     | 12.25ms       | 791.46       |
-| [Grape][grape]              | 7094     | 14.18ms       | 709.27       |
-| [Rails::Metal][rails-metal] | 6304     | 15.87ms       | 630.29       |
-| [Rails::API][rails-api]     | 4727     | 21.01ms       | 472.64       |
-| [Rails][rails]              | 3940     | 2.74ms        | 393.88       |
+| [Crepe][crepe]              | 8254     | 12.49ms       | 825.28       |
+| [Sinatra][sinatra]          | 7859     | 13.52ms       | 785.82       |
+| [Grape][grape]              | 6999     | 14.53ms       | 699.87       |
+| [Rails::Metal][rails-metal] | 6202     | 16.05ms       | 620.16       |
+| [Rails::API][rails-api]     | 4770     | 10.63ms       | 476.95       |
+| [Rails][rails]              | 4033     | 24.58ms       | 403.25       |
 
 ### `/wiggles/:id/comments`
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Sinatra][sinatra]          | 2511     | 40.11ms       | 250.85       |
-| [Grape][grape]              | 2445     | 40.25ms       | 244.43       |
-| [Rails::Metal][rails-metal] | 2172     | 46.04ms       | 217.17       |
-| [Rails::API][rails-api]     | 1948     | 51.03ms       | 194.78       |
-| [Rails][rails]              | 1861     | 10.83ms       | 186.06       |
+| [Crepe][crepe]              | 3243     | 30.52ms       | 324.21       |
+| [Sinatra][sinatra]          | 2550     | 38.75ms       | 254.95       |
+| [Grape][grape]              | 2443     | 37.63ms       | 244.25       |
+| [Rails::Metal][rails-metal] | 2020     | 5.14ms        | 201.92       |
+| [Rails::API][rails-api]     | 1959     | 10.42ms       | 195.82       |
+| [Rails][rails]              | 1803     | 54.62ms       | 180.24       |
 
 ### System Information
 
@@ -96,7 +99,12 @@ These benchmarks are run on a 15" Retina MacBook Pro with the following specific
  * GPU: Intel HD Graphics 4000 1024 MB
  * OS: Mac OS X 10.9.2
 
+[crepe]: https://github.com/crepe/crepe
+[grape]: https://github.com/intridea/grape
 [rails]: https://github.com/rails/rails
+[rails-api]: https://github.com/rails-api/rails-api
+[rails-metal]: http://api.rubyonrails.org/classes/ActionController/Metal.html
+[sinatra]: https://github.com/sinatra/sinatra/
 [postgresql]: http://www.postgresql.org
 [puma]: https://github.com/puma/puma
 [ruby]: https://github.com/ruby/ruby

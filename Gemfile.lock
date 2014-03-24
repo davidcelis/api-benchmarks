@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/crepe/crepe.git
+  revision: ce38920ef627d8e8bae5af175bf23e394bb847bb
+  specs:
+    crepe (0.0.1.pre)
+      activesupport (>= 4.0.0)
+      rack (~> 1.5.x)
+      rack-mount (~> 0.8.x)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -129,6 +138,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (= 4.0.4)
+  crepe!
   ffaker
   grape (= 0.6.1)
   json (= 1.8.1)

@@ -2,7 +2,7 @@ require File.expand_path('../config/environment.rb', __FILE__)
 Bundler.setup(:default, :grape)
 require 'grape'
 
-class Wiggles < Grape::API
+class WigglesAPI < Grape::API
   format :json
 
   namespace :wiggles do
@@ -22,4 +22,4 @@ class Wiggles < Grape::API
 end
 
 use ActiveRecord::ConnectionAdapters::ConnectionManagement
-run Wiggles
+run WigglesAPI
