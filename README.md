@@ -1,6 +1,6 @@
 # API Benchmarks
 
-This repository provides applications in various Ruby web frameworks for the purposes of easy benchmarking. All benchmarks are currently run using [wrk][wrk], though more benchmarking tools may be used in the future.
+This repository provides applications in various Ruby web frameworks for the purposes of easy benchmarking. All benchmarks are currently run using [wrk][wrk], though more benchmarking tools may be used in the future. Each web framework implements a sample application that I like to call "Wiggles".
 
 ## Setup
 
@@ -47,15 +47,15 @@ $ rake benchmark:rails
 
 All applications boot via `rackup` using the [Puma][puma] dispatcher. Each application defines three endpoints:
 
- * `/posts` (renders 100 posts as JSON)
- * `/posts/:id` (renders a single post as JSON)
- * `/posts/:id/comments` (renders 25 comments on a single post as JSON)
+ * `/wiggles` (renders 100 wiggles as JSON)
+ * `/wiggles/:id` (renders a single wiggle as JSON)
+ * `/wiggles/:id/comments` (renders 25 comments on a single wiggle as JSON)
 
-Each endpoint is hit consecutively for 10 seconds using `wrk -t 2 -c 10 -d 10S`.
+Each endpoint is hit consecutively for 10 minutes using `wrk -t 2 -c 10 -d 10m`.
 
 ## Results
 
-Note: _I've ordered results by what I believe is the more important metric: Requests/sec_
+Note: _I've ordered results by the average number of requests/sec each framework was able to handle. Response time seems to vary, and I'm unsure of whether the response time reported is actually an average or some other metric._
 
 ### `/wiggles`
 
