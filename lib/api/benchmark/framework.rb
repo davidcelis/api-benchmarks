@@ -42,7 +42,7 @@ module API
       end
 
       def wrk!(path)
-        `wrk -t 2 -c 10 -d 10s -H "Accept: application/json" "http://0.0.0.0:9292#{path}"`
+        `wrk -t 2 -c 10 -d 10m -H "Accept: application/json" "http://0.0.0.0:9292#{path}"`
       end
     end
   end
