@@ -61,29 +61,31 @@ Note: _I've ordered results by what I believe is the more important metric: Requ
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Sinatra][sinatra]          | 1158     | 86.29ms       | 115.77       |
-| [Rails::Metal][rails-metal] | 1109     | 89.01ms       | 110.88       |
-| [Rails::API][rails-api]     | 981      | 20.73ms       | 98.08        |
-| [Rails][rails]              | 915      | 109.68ms      | 91.48        |
+| [Sinatra][sinatra]          | 1102     | 91.08ms       | 110.18       |
+| [Rails::API][rails-api]     | 992      | 99.65ms       | 99.17        |
+| [Rails][rails]              | 930      | 105.19ms      | 92.97        |
+| [Grape][grape]              | 886      | 112.66ms      | 88.57        |
+| [Rails::Metal][rails-metal] | 857      | 116.56ms      | 85.69        |
 
 ### `/wiggles/:id`
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Sinatra][sinatra]          | 7784     | 13.51ms       | 778.27       |
-| [Rails::Metal][rails-metal] | 5943     | 16.81ms       | 594.27       |
-| [Rails::API][rails-api]     | 4678     | 12.84ms       | 467.75       |
-| [Rails][rails]              | 4190     | 5.00ms        | 419.00       |
+| [Sinatra][sinatra]          | 7915     | 12.25ms       | 791.46       |
+| [Grape][grape]              | 7094     | 14.18ms       | 709.27       |
+| [Rails::Metal][rails-metal] | 6304     | 15.87ms       | 630.29       |
+| [Rails::API][rails-api]     | 4727     | 21.01ms       | 472.64       |
+| [Rails][rails]              | 3940     | 2.74ms        | 393.88       |
 
 ### `/wiggles/:id/comments`
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Sinatra][sinatra]          | 2496     | 39.88ms       | 249.60       |
-| [Rails::Metal][rails-metal] | 2265     | 43.52ms       | 226.46       |
-| [Rails::API][rails-api]     | 1931     | 51.80ms       | 193.05       |
-| [Rails][rails]              | 1783     | 50.49ms       | 178.22       |
-
+| [Sinatra][sinatra]          | 2511     | 40.11ms       | 250.85       |
+| [Grape][grape]              | 2445     | 40.25ms       | 244.43       |
+| [Rails::Metal][rails-metal] | 2172     | 46.04ms       | 217.17       |
+| [Rails::API][rails-api]     | 1948     | 51.03ms       | 194.78       |
+| [Rails][rails]              | 1861     | 10.83ms       | 186.06       |
 
 ### System Information
 
