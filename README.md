@@ -61,34 +61,37 @@ Note: _I've ordered results by what I believe is the more important metric: Requ
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Crepe][crepe]              | 1339     | 69.56ms       | 133.86       |
-| [Grape][grape]              | 1152     | 85.36ms       | 115.17       |
-| [Sinatra][sinatra]          | 1150     | 62.16ms       | 114.98       |
-| [Rails::Metal][rails-metal] | 1105     | 90.26ms       | 110.46       |
-| [Rails::API][rails-api]     | 996      | 97.25ms       | 99.57        |
-| [Rails][rails]              | 951      | 103.53ms      | 95.08        |
+| [Crepe][crepe]              | 1672     | 6.88ms        | 167.12       |
+| [Sinatra][sinatra]          | 1191     | 75.62ms       | 119.08       |
+| [Grape][grape]              | 1172     | 82.93ms       | 117.17       |
+| [Camping][camping]          | 1165     | 18.90ms       | 116.48       |
+| [Rails::Metal][rails-metal] | 1127     | 17.84ms       | 112.67       |
+| [Rails::API][rails-api]     | 1011     | 97.00ms       | 101.06       |
+| [Rails][rails]              | 978      | 100.81ms      | 97.75        |
 
 ### `/wiggles/:id`
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Crepe][crepe]              | 8254     | 12.49ms       | 825.28       |
-| [Sinatra][sinatra]          | 7859     | 13.52ms       | 785.82       |
-| [Grape][grape]              | 6999     | 14.53ms       | 699.87       |
-| [Rails::Metal][rails-metal] | 6202     | 16.05ms       | 620.16       |
-| [Rails::API][rails-api]     | 4770     | 10.63ms       | 476.95       |
-| [Rails][rails]              | 4033     | 24.58ms       | 403.25       |
+| [Camping][camping]          | 8383     | 13.52ms       | 838.22       |
+| [Sinatra][sinatra]          | 7395     | 2.84ms        | 739.34       |
+| [Crepe][crepe]              | 7279     | 2.94ms        | 727.76       |
+| [Grape][grape]              | 7045     | 14.21ms       | 704.47       |
+| [Rails::Metal][rails-metal] | 6056     | 16.49ms       | 605.56       |
+| [Rails::API][rails-api]     | 4522     | 21.99ms       | 452.18       |
+| [Rails][rails]              | 3265     | 34.10ms       | 326.46       |
 
 ### `/wiggles/:id/comments`
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Crepe][crepe]              | 3243     | 30.52ms       | 324.21       |
-| [Sinatra][sinatra]          | 2550     | 38.75ms       | 254.95       |
-| [Grape][grape]              | 2443     | 37.63ms       | 244.25       |
-| [Rails::Metal][rails-metal] | 2020     | 5.14ms        | 201.92       |
-| [Rails::API][rails-api]     | 1959     | 10.42ms       | 195.82       |
-| [Rails][rails]              | 1803     | 54.62ms       | 180.24       |
+| [Crepe][crepe]              | 3013     | 33.02ms       | 301.27       |
+| [Camping][camping]          | 2623     | 37.22ms       | 262.28       |
+| [Grape][grape]              | 2330     | 42.85ms       | 232.93       |
+| [Rails::Metal][rails-metal] | 2183     | 45.56ms       | 218.28       |
+| [Sinatra][sinatra]          | 1989     | 31.40ms       | 198.84       |
+| [Rails::API][rails-api]     | 1724     | 5.96ms        | 172.38       |
+| [Rails][rails]              | 1682     | 59.66ms       | 168.19       |
 
 ### System Information
 
