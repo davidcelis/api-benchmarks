@@ -19,6 +19,12 @@ module API
         ]
       end
 
+      def sort
+        sorted = self.rows.map { |r| r.cells.map(&:value) }
+        self.rows = sorted.sort_by { |r| r[3].to_f }.reverse
+        self
+      end
+
       private
 
       def parse_results(results)

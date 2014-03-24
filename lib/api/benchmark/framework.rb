@@ -17,8 +17,7 @@ module API
 
           options[:report].add_row(self, results)
         ensure
-          Process.kill('SIGINT', @pid)
-          @pid = nil
+          Process.kill('KILL', @pid)
         end
       end
 

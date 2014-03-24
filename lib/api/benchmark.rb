@@ -15,14 +15,14 @@ module API
 
       PATHS.each do |path|
         puts "\n### `#{path.sub(/\d+/, ':id')}`"
-        
+
         table = API::Benchmark::Table.new
 
         @frameworks.each do |framework|
           framework.benchmark!(path: path, report: table)
         end
 
-        puts "\n#{table.to_s.lines[1..-2].join}"
+        puts "\n#{table.sort.to_s.lines[1..-2].join}"
       end
     end
   end
