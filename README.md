@@ -61,25 +61,29 @@ Note: _I've ordered results by what I believe is the more important metric: Requ
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Rails::API][rails-api]     |     1026 |       48.58ms |       102.58 |
-| [Rails::Metal][rails-metal] |     1108 |       90.64ms |       110.79 |
-| [Rails][rails]              |      952 |      105.89ms |        95.16 |
+| [Sinatra][sinatra]          | 1158     | 86.29ms       | 115.77       |
+| [Rails::Metal][rails-metal] | 1109     | 89.01ms       | 110.88       |
+| [Rails::API][rails-api]     | 981      | 20.73ms       | 98.08        |
+| [Rails][rails]              | 915      | 109.68ms      | 91.48        |
 
 ### `/wiggles/:id`
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Rails::API][rails-api]     |     4613 |       21.69ms |       461.24 |
-| [Rails::Metal][rails-metal] |     6223 |       15.95ms |       621.97 |
-| [Rails][rails]              |     3999 |       24.73ms |       399.82 |
+| [Sinatra][sinatra]          | 7784     | 13.51ms       | 778.27       |
+| [Rails::Metal][rails-metal] | 5943     | 16.81ms       | 594.27       |
+| [Rails::API][rails-api]     | 4678     | 12.84ms       | 467.75       |
+| [Rails][rails]              | 4190     | 5.00ms        | 419.00       |
 
 ### `/wiggles/:id/comments`
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Rails::API][rails-api]     |     1926 |       52.40ms |       192.57 |
-| [Rails::Metal][rails-metal] |     2231 |       44.44ms |       223.07 |
-| [Rails][rails]              |     1738 |       59.30ms |       173.78 |
+| [Sinatra][sinatra]          | 2496     | 39.88ms       | 249.60       |
+| [Rails::Metal][rails-metal] | 2265     | 43.52ms       | 226.46       |
+| [Rails::API][rails-api]     | 1931     | 51.80ms       | 193.05       |
+| [Rails][rails]              | 1783     | 50.49ms       | 178.22       |
+
 
 ### System Information
 

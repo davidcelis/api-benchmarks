@@ -15,3 +15,4 @@ gem 'pry'
 # Frameworks.
 gem 'rails', '4.0.4', group: [:rails, 'rails-metal']
 gem 'rails-api', '0.2.0', group: 'rails-api'
+gem 'sinatra', '1.4.4', group: :sinatra
