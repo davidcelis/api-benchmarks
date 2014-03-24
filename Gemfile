@@ -14,6 +14,7 @@ gem 'pry'
 
 # Frameworks.
 gem 'camping',   '2.1.532',             group: :camping
+gem 'cuba',      '3.1.1',               group: :cuba
 gem 'crepe',     github: 'crepe/crepe', group: :crepe
 gem 'grape',     '0.6.1',               group: :grape
 gem 'rails',     '4.0.4',               group: [:rails, 'rails-metal']

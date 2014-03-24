@@ -46,6 +46,8 @@ GEM
     coderay (1.1.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
+    cuba (3.1.1)
+      rack
     descendants_tracker (0.0.3)
     equalizer (0.0.9)
     erubis (2.7.0)
@@ -144,6 +146,7 @@ DEPENDENCIES
   activerecord (= 4.0.4)
   camping (= 2.1.532)
   crepe!
+  cuba (= 3.1.1)
   ffaker
   grape (= 0.6.1)
   json (= 1.8.1)
