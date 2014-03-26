@@ -17,6 +17,7 @@ gem 'camping',   '2.1.532',             group: :camping
 gem 'cuba',      '3.1.1',               group: :cuba
 gem 'crepe',     github: 'crepe/crepe', group: :crepe
 gem 'grape',     '0.6.1',               group: :grape
+gem 'hobbit',    '0.5.0',               group: :hobbit
 gem 'rails',     '4.0.4',               group: [:rails, 'rails-metal']
 gem 'rails-api', '0.2.0',               group: 'rails-api'
 gem 'sinatra',   '1.4.4',               group: :sinatra
