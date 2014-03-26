@@ -8,6 +8,7 @@ Bundler.require(:default)
 
 ActiveSupport::Inflector.inflections do |inflect|
   inflect.acronym 'API'
+  inflect.acronym 'NYNY'
 end
 
 spec = YAML.load(ERB.new(File.read('config/database.yml')).result)

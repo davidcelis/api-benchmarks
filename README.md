@@ -66,6 +66,7 @@ Note: _I've ordered results by the average number of requests/sec each framework
 | [Sinatra][sinatra]          | 20128    | 65.29ms       | 111.81       |
 | [Camping][camping]          | 19868    | 92.90ms       | 110.36       |
 | [Cuba][cuba]                | 17546    | 74.20ms       | 97.47        |
+| [NYNY][nyny]                | 17421    | 105.40ms      | 96.76        |
 | [Hobbit][hobbit]            | 17346    | 105.85ms      | 96.36        |
 | [Grape][grape]              | 16686    | 77.68ms       | 92.70        |
 | [Rails::API][rails-api]     | 15014    | 122.02ms      | 83.41        |
@@ -80,6 +81,7 @@ Note: _I've ordered results by the average number of requests/sec each framework
 | [Camping][camping]          | 162839   | 14.40ms       | 904.65       |
 | [Crepe][crepe]              | 147020   | 12.14ms       | 816.77       |
 | [Sinatra][sinatra]          | 136731   | 15.21ms       | 759.61       |
+| [NYNY][nyny]                | 128233   | 15.36ms       | 712.40       |
 | [Grape][grape]              | 125908   | 14.11ms       | 699.48       |
 | [Rails::Metal][rails-metal] | 111451   | 4.09ms        | 619.08       |
 | [Rails::API][rails-api]     | 80768    | 22.65ms       | 448.70       |
@@ -91,6 +93,7 @@ Note: _I've ordered results by the average number of requests/sec each framework
 |-----------------------------|----------|---------------|--------------|
 | [Crepe][crepe]              | 59356    | 8.20ms        | 329.69       |
 | [Hobbit][hobbit]            | 46322    | 39.86ms       | 257.33       |
+| [NYNY][nyny]                | 44155    | 10.48ms       | 245.30       |
 | [Cuba][cuba]                | 43855    | 37.85ms       | 243.63       |
 | [Camping][camping]          | 41497    | 44.54ms       | 230.53       |
 | [Grape][grape]              | 41356    | 44.72ms       | 229.75       |
@@ -108,8 +111,11 @@ These benchmarks are run on a 15" Retina MacBook Pro with the following specific
  * GPU: Intel HD Graphics 4000 1024 MB
  * OS: Mac OS X 10.9.2
 
+[cuba]: https://github.com/soveran/cuba
 [crepe]: https://github.com/crepe/crepe
 [grape]: https://github.com/intridea/grape
+[hobbit]: https://github.com/patriciomacadden/hobbit
+[nyny]: https://github.com/alisnic/nyny
 [rails]: https://github.com/rails/rails
 [rails-api]: https://github.com/rails-api/rails-api
 [rails-metal]: http://api.rubyonrails.org/classes/ActionController/Metal.html
