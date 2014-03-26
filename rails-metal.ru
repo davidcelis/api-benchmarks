@@ -20,16 +20,19 @@ end
 class WigglesController < ActionController::Metal
   # GET /wiggles.json
   def index
+    self.content_type  = 'application/json; charset=utf-8'
     self.response_body = Wiggle.all.to_json
   end
 
   # GET /wiggles/:id.json
   def show
+    self.content_type  = 'application/json; charset=utf-8'
     self.response_body = Wiggle.find(params[:id]).to_json
   end
 
   # GET /wiggles/:id/comments.json
   def comments
+    self.content_type  = 'application/json; charset=utf-8'
     self.response_body = Wiggle.find(params[:id]).comments.to_json
   end
 end

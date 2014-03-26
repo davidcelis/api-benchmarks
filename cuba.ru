@@ -8,6 +8,7 @@ Cuba.define do
   on get do
     on 'wiggles' do
       on root do
+        res.headers['Content-Type'] = 'application/json; charset=utf-8'
         res.write Wiggle.all.to_json
       end
 
@@ -15,10 +16,12 @@ Cuba.define do
         wiggle = Wiggle.find(id)
 
         on root do
+          res.headers['Content-Type'] = 'application/json; charset=utf-8'
           res.write wiggle.to_json
         end
 
         on 'comments' do
+          res.headers['Content-Type'] = 'application/json; charset=utf-8'
           res.write wiggle.comments.to_json
         end
       end
