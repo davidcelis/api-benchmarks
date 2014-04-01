@@ -111,6 +111,7 @@ These benchmarks are run on a 15" Retina MacBook Pro with the following specific
  * GPU: Intel HD Graphics 4000 1024 MB
  * OS: Mac OS X 10.9.2
 
+[camping]: https://github.com/camping/camping
 [cuba]: https://github.com/soveran/cuba
 [crepe]: https://github.com/crepe/crepe
 [grape]: https://github.com/intridea/grape
