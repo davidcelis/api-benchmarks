@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/crepe/crepe.git
-  revision: ce38920ef627d8e8bae5af175bf23e394bb847bb
+  revision: 717560291afddf98ce5b2d4897d25a84271fe381
   specs:
     crepe (0.0.1.pre)
       activesupport (>= 4.0.0)
@@ -35,7 +35,6 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
-    atomic (1.1.16)
     axiom-types (0.0.5)
       descendants_tracker (~> 0.0.1)
       ice_nine (~> 0.9)
@@ -138,8 +137,7 @@ GEM
       sprockets (~> 2.8)
     terminal-table (1.4.5)
     thor (0.18.1)
-    thread_safe (0.3.1)
-      atomic (>= 1.1.7, < 2)
+    thread_safe (0.3.3)
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
