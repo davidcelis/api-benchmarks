@@ -1,10 +1,1 @@
-camping: bundle exec rackup camping.ru
-crepe: bundle exec rackup crepe.ru
-cuba: bundle exec rackup cuba.ru
-grape: bundle exec rackup grape.ru
-hobbit: bundle exec rackup hobbit.ru
-nyny: bundle exec rackup nyny.ru
-rails_api: bundle exec rackup rails-api.ru
-rails_metal: bundle exec rackup rails-metal.ru
-rails: bundle exec rackup rails.ru
-sinatra: bundle exec rackup sinatra.ru
+web: bundle exec rackup $HEROKU_RACKUP_FILE
