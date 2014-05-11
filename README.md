@@ -43,6 +43,23 @@ $ rake benchmark:all
 $ rake benchmark:rails
 ```
 
+To run benchmarks on Heroku (recommended, so that the web servers are not competing with the load generation tool for resources), first set up Heroku:
+
+```bash
+$ brew install heroku
+$ bundle exec rake heroku:setup
+$ heroku run rake db:migrate db:seed
+```
+
+Then, you can run benchmarks:
+
+```bash
+$ HEROKU=true rake benchmark:all
+
+# Or, run benchmarks for one framework
+$ HEROKU=true rake benchmark:rails
+```
+
 ### Benchmarking Information
 
 All applications boot via `rackup` using the [Puma][puma] dispatcher. Each application defines three endpoints:
@@ -104,12 +121,14 @@ Note: _I've ordered results by the average number of requests/sec each framework
 
 ### System Information
 
-These benchmarks are run on a 15" Retina MacBook Pro with the following specifications:
+Load is generated on a 15" Retina MacBook Pro with the following specifications:
 
  * CPU: 2.3 GHz Intel Core i7
  * RAM: 16 GB 1600 MHz DDR3
  * GPU: Intel HD Graphics 4000 1024 MB
  * OS: Mac OS X 10.9.2
+
+All web applications were run on Heroku, using a single free dyno.
 
 [camping]: https://github.com/camping/camping
 [cuba]: https://github.com/soveran/cuba
