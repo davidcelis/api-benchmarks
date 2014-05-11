@@ -12,6 +12,6 @@ ActiveSupport::Inflector.inflections do |inflect|
 end
 
 spec = YAML.load(ERB.new(File.read('config/database.yml')).result)
-ActiveRecord::Base.establish_connection(spec['development'])
+ActiveRecord::Base.establish_connection(spec[ENV['RACK_ENV']])
 
 Dir['app/models/*.rb'].each { |model| require model }
