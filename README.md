@@ -78,46 +78,46 @@ Note: _I've ordered results by the average number of requests/sec each framework
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Crepe][crepe]              | 21816    | 84.02ms       | 121.19       |
-| [Rails::Metal][rails-metal] | 20559    | 17.89ms       | 114.18       |
-| [Sinatra][sinatra]          | 20128    | 65.29ms       | 111.81       |
-| [Camping][camping]          | 19868    | 92.90ms       | 110.36       |
-| [Cuba][cuba]                | 17546    | 74.20ms       | 97.47        |
-| [NYNY][nyny]                | 17421    | 105.40ms      | 96.76        |
-| [Hobbit][hobbit]            | 17346    | 105.85ms      | 96.36        |
-| [Grape][grape]              | 16686    | 77.68ms       | 92.70        |
-| [Rails::API][rails-api]     | 15014    | 122.02ms      | 83.41        |
-| [Rails][rails]              | 14493    | 126.50ms      | 80.50        |
+| [Crepe][crepe]              | 12845    | 138.05ms      | 71.35        |
+| [Rails::Metal][rails-metal] | 12365    | 149.31ms      | 68.68        |
+| [Cuba][cuba]                | 12308    | 149.14ms      | 68.37        |
+| [Sinatra][sinatra]          | 12258    | 153.87ms      | 68.08        |
+| [Camping][camping]          | 11343    | 162.89ms      | 63.01        |
+| [Rails::API][rails-api]     | 11195    | 163.06ms      | 62.18        |
+| [Rails][rails]              | 11075    | 162.34ms      | 61.52        |
+| [Hobbit][hobbit]            | 10047    | 192.06ms      | 55.80        |
+| [NYNY][nyny]                | 8780     | 96.03ms       | 48.77        |
+| [Grape][grape]              | 6297     | 325.15ms      | 34.97        |
 
 ### `/wiggles/:id`
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Hobbit][hobbit]            | 172482   | 13.60ms       | 958.22       |
-| [Cuba][cuba]                | 168676   | 8.61ms        | 937.07       |
-| [Camping][camping]          | 162839   | 14.40ms       | 904.65       |
-| [Crepe][crepe]              | 147020   | 12.14ms       | 816.77       |
-| [Sinatra][sinatra]          | 136731   | 15.21ms       | 759.61       |
-| [NYNY][nyny]                | 128233   | 15.36ms       | 712.40       |
-| [Grape][grape]              | 125908   | 14.11ms       | 699.48       |
-| [Rails::Metal][rails-metal] | 111451   | 4.09ms        | 619.08       |
-| [Rails::API][rails-api]     | 80768    | 22.65ms       | 448.70       |
-| [Rails][rails]              | 70997    | 25.78ms       | 394.42       |
+| [Sinatra][sinatra]          | 15305    | 117.90ms      | 85.03        |
+| [Camping][camping]          | 15136    | 121.07ms      | 84.08        |
+| [Hobbit][hobbit]            | 15039    | 121.25ms      | 83.54        |
+| [Crepe][crepe]              | 14861    | 120.93ms      | 82.54        |
+| [Grape][grape]              | 14575    | 124.94ms      | 80.97        |
+| [Cuba][cuba]                | 14393    | 123.45ms      | 79.95        |
+| [Rails::API][rails-api]     | 14379    | 124.76ms      | 79.88        |
+| [Rails::Metal][rails-metal] | 14296    | 125.13ms      | 79.39        |
+| [Rails][rails]              | 13654    | 135.26ms      | 75.84        |
+| [NYNY][nyny]                | 10086    | 123.56ms      | 56.03        |
 
 ### `/wiggles/:id/comments`
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Crepe][crepe]              | 59356    | 8.20ms        | 329.69       |
-| [Hobbit][hobbit]            | 46322    | 39.86ms       | 257.33       |
-| [NYNY][nyny]                | 44155    | 10.48ms       | 245.30       |
-| [Cuba][cuba]                | 43855    | 37.85ms       | 243.63       |
-| [Camping][camping]          | 41497    | 44.54ms       | 230.53       |
-| [Grape][grape]              | 41356    | 44.72ms       | 229.75       |
-| [Sinatra][sinatra]          | 39211    | 46.91ms       | 217.83       |
-| [Rails::Metal][rails-metal] | 36801    | 39.67ms       | 204.43       |
-| [Rails::API][rails-api]     | 33272    | 49.21ms       | 184.81       |
-| [Rails][rails]              | 29002    | 63.00ms       | 161.12       |
+| [Camping][camping]          | 13828    | 131.78ms      | 76.81        |
+| [Hobbit][hobbit]            | 13543    | 132.41ms      | 75.23        |
+| [Grape][grape]              | 13455    | 133.76ms      | 74.74        |
+| [Crepe][crepe]              | 13431    | 132.55ms      | 74.61        |
+| [Rails::Metal][rails-metal] | 13018    | 139.38ms      | 72.31        |
+| [Rails][rails]              | 12794    | 138.68ms      | 71.08        |
+| [Cuba][cuba]                | 11698    | 170.63ms      | 64.98        |
+| [Sinatra][sinatra]          | 11494    | 165.45ms      | 63.85        |
+| [NYNY][nyny]                | 11208    | 119.96ms      | 62.25        |
+| [Rails::API][rails-api]     | 7659     | 253.80ms      | 42.54        |
 
 ### System Information
 
