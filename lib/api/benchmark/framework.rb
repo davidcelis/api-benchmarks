@@ -17,7 +17,7 @@ module API
 
           options[:report].add_row(self, results)
         ensure
-          Process.kill('KILL', @pid)
+          Process.kill('KILL', @pid) unless heroku?
         end
       end
 
@@ -29,20 +29,37 @@ module API
         @name
       end
 
+      def heroku?
+        !!ENV['HEROKU']
+      end
+
       private
 
       def rackup!
-        @pid = Process.spawn("bundle exec rackup #{@name}.ru", {
-          out: '/dev/null',
-          err: '/dev/null'
-        })
+        if heroku?
+          `heroku config:set HEROKU_RACKUP_FILE="#{@name}.ru"`
+        else
+          @pid = Process.spawn("bundle exec rackup #{@name}.ru", {
+            out: '/dev/null',
+            err: '/dev/null'
+          })
+        end
 
         # Allow the server to start up.
-        sleep 1 until system('curl -sS "0.0.0.0:9292" &>/dev/null')
+        sleep 1 until system("curl -sS '#{url}' &>/dev/null")
       end
 
       def wrk!(path)
-        `wrk -t 2 -c 10 -d 3m -H "Accept: application/json" "http://0.0.0.0:9292#{path}"`
+        `wrk -t 2 -c 10 -d 3m -H "Accept: application/json" "#{url}#{path}"`
+      end
+
+      def url
+        if heroku?
+          heroku_info = `heroku apps:info --shell`
+          heroku_info.match(/^web_url=(.+)$/)[1]
+        else
+          "http://0.0.0.0:9292"
+        end
       end
     end
   end
