@@ -1,1 +1,1 @@
-web: bundle exec rackup $HEROKU_RACKUP_FILE
+web: bundle exec rackup $HEROKU_RACKUP_FILE -p $PORT
