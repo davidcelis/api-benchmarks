@@ -4,7 +4,7 @@ require 'lib/api/benchmark/table'
 module API
   class Benchmark
     FRAMEWORKS = Dir['*.ru'].map { |ru| Framework.new(ru.match(/(.+)\.ru/)[1]) }
-    PATHS = ['/wiggles', '/wiggles/1', '/wiggles/1/comments']
+    PATHS = %w[/wiggles /wiggles/1 /wiggles/1/comments]
 
     def initialize(*frameworks)
       @frameworks = frameworks

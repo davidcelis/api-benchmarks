@@ -56,7 +56,7 @@ module API
       def url
         if heroku?
           heroku_info = `heroku apps:info --shell`
-          heroku_info.match(/^web_url=(.+)$/)[1]
+          heroku_info.match(/^web_url=(.+)\/$/)[1]
         else
           "http://0.0.0.0:9292"
         end
