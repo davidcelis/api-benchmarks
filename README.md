@@ -6,7 +6,7 @@ This repository provides applications in various Ruby web frameworks for the pur
 
 Here's the software used to run these benchmarks:
 
-* [Ruby 2.1.1][ruby] (with bundler: `gem install bundler`)
+* [Ruby 2.1.2][ruby] (with bundler: `gem install bundler`)
 * [PostgreSQL][postgresql]
 * [wrk][wrk]
 
@@ -15,7 +15,7 @@ If one of these isn't installed:
 ```bash
 # Ruby
 $ brew install chruby ruby-install
-$ ruby-install ruby 2.1.1
+$ ruby-install ruby 2.1.2
 $ chruby ruby-2.1
 
 # PostgreSQL

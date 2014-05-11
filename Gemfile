@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
+
 # Constants.
 gem 'puma', '2.8.1'
 gem 'pg',   '0.17.1'
