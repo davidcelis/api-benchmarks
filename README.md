@@ -68,7 +68,7 @@ All applications boot via `rackup` using the [Puma][puma] dispatcher. Each appli
  * `/wiggles/:id` (renders a single wiggle as JSON)
  * `/wiggles/:id/comments` (renders 25 comments on a single wiggle as JSON)
 
-Each endpoint is hit consecutively for 10 minutes using `wrk -t 2 -c 10 -d 10m`.
+Each endpoint is hit consecutively for 3 minutes using `wrk -t 2 -c 10 -d 3m`.
 
 ## Results
 
