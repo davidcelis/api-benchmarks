@@ -15,22 +15,11 @@
 # gem 'pg'
 #
 
-defaults: &defaults
-  host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
-  port: <%= ENV['DATABASE_PORT'] || 5432 %>
+development:
+  database: api_benchmarks
+  host: localhost
+  port: 5432
   adapter: postgresql
   pool: 5
   username: postgres
   password:
-
-development:
-  <<: *defaults
-  database: api_benchmarks
-
-production:
-  <<: *defaults
-  database: api_benchmarks_production
-
-postgres:
-  <<: *defaults
-  database: postgres
