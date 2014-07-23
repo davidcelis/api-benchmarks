@@ -7,7 +7,6 @@ This repository provides applications in various Ruby web frameworks for the pur
 Here's the software used to run these benchmarks:
 
 * [Ruby 2.1.2][ruby] (with bundler: `gem install bundler`)
-* [PostgreSQL][postgresql]
 * [wrk][wrk]
 
 If one of these isn't installed:
@@ -16,10 +15,7 @@ If one of these isn't installed:
 # Ruby
 $ brew install chruby ruby-install
 $ ruby-install ruby 2.1.2
-$ chruby ruby-2.1
-
-# PostgreSQL
-$ brew install postgresql
+$ chruby ruby-2.1.2
 
 # wrk
 $ brew install wrk
@@ -120,7 +116,6 @@ All web applications were run on Heroku, using a single free dyno.
 [rails-api]: https://github.com/rails-api/rails-api
 [rails-metal]: http://api.rubyonrails.org/classes/ActionController/Metal.html
 [sinatra]: https://github.com/sinatra/sinatra/
-[postgresql]: http://www.postgresql.org
 [puma]: https://github.com/puma/puma
 [ruby]: https://github.com/ruby/ruby
 [wrk]: https://github.com/wg/wrk
