@@ -1,6 +1,6 @@
 # API Benchmarks
 
-This repository provides applications in various Ruby web frameworks for the purposes of easy benchmarking. All benchmarks are currently run using [wrk][wrk], though more benchmarking tools may be used in the future. Each web framework implements a sample application that I like to call "Wiggles".
+This repository provides applications in various Ruby web frameworks for the purposes of easy benchmarking. All benchmarks are currently run using [wrk][wrk], though other benchmarking tools may be used in the future.
 
 ## Setup
 
@@ -31,7 +31,6 @@ First, set up the benchmarking database:
 
 ```bash
 $ bundle install
-$ bundle exec rake db:setup
 ```
 
 Then, you can run benchmarks:
@@ -47,8 +46,7 @@ To run benchmarks on Heroku (recommended, so that the web servers are not compet
 
 ```bash
 $ brew install heroku
-$ bundle exec rake heroku:setup
-$ heroku run rake db:migrate db:seed
+$ heroku create
 ```
 
 Then, you can run benchmarks:
@@ -62,11 +60,10 @@ $ HEROKU=true rake benchmark:rails
 
 ### Benchmarking Information
 
-All applications boot via `rackup` using the [Puma][puma] dispatcher. Each application defines three endpoints:
+All applications boot via `rackup` using the [Puma][puma] dispatcher. Each application defines two endpoints:
 
- * `/wiggles` (renders 100 wiggles as JSON)
- * `/wiggles/:id` (renders a single wiggle as JSON)
- * `/wiggles/:id/comments` (renders 25 comments on a single wiggle as JSON)
+ * `/empty` (renders an empty response body)
+ * `/numbers/:count` (renders an array of `:count` numbers as JSON, defaults to 1000 numbers)
 
 Each endpoint is hit consecutively for 3 minutes using `wrk -t 2 -c 10 -d 3m`.
 
@@ -74,47 +71,33 @@ Each endpoint is hit consecutively for 3 minutes using `wrk -t 2 -c 10 -d 3m`.
 
 Note: _I've ordered results by the average number of requests/sec each framework was able to handle. Response time seems to vary, and I'm unsure of whether the response time reported is actually an average or some other metric._
 
-### `/wiggles`
+### `/empty`
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Crepe][crepe]              | 40000    | 46.27ms       | 222.21       |
-| [Hobbit][hobbit]            | 33847    | 54.59ms       | 188.03       |
-| [Camping][camping]          | 33535    | 39.06ms       | 186.30       |
-| [Cuba][cuba]                | 33352    | 44.18ms       | 185.28       |
-| [Sinatra][sinatra]          | 32014    | 56.99ms       | 177.83       |
-| [Grape][grape]              | 31368    | 41.52ms       | 174.25       |
-| [Rails::Metal][rails-metal] | 28569    | 63.22ms       | 158.71       |
-| [Rails::API][rails-api]     | 26190    | 69.10ms       | 145.50       |
-| [Rails][rails]              | 24791    | 72.85ms       | 137.72       |
+| [Hobbit][hobbit]            | 391970   | 13.74ms       | 2177.60      |
+| [Cuba][cuba]                | 365010   | 12.26ms       | 2027.83      |
+| [Camping][camping]          | 346946   | 12.84ms       | 1927.47      |
+| [Crepe][crepe]              | 337712   | 10.30ms       | 1876.18      |
+| [Sinatra][sinatra]          | 253480   | 9.48ms        | 1408.21      |
+| [Grape][grape]              | 237833   | 12.27ms       | 1321.29      |
+| [Rails::Metal][rails-metal] | 197913   | 11.37ms       | 1099.50      |
+| [Rails::API][rails-api]     | 131132   | 14.49ms       | 728.50       |
+| [Rails][rails]              | 124766   | 16.22ms       | 693.14       |
 
-### `/wiggles/:id`
-
-| Framework                   | Requests | Response Time | Requests/sec |
-|-----------------------------|----------|---------------|--------------|
-| [Hobbit][hobbit]            | 185011   | 12.60ms       | 1027.83      |
-| [Camping][camping]          | 170794   | 12.98ms       | 948.85       |
-| [Cuba][cuba]                | 168209   | 13.20ms       | 934.49       |
-| [Crepe][crepe]              | 153986   | 14.26ms       | 855.46       |
-| [Sinatra][sinatra]          | 146987   | 14.38ms       | 816.59       |
-| [Grape][grape]              | 124995   | 15.79ms       | 694.41       |
-| [Rails::Metal][rails-metal] | 119957   | 4.59ms        | 666.29       |
-| [Rails::API][rails-api]     | 88076    | 20.83ms       | 489.31       |
-| [Rails][rails]              | 75076    | 24.04ms       | 417.07       |
-
-### `/wiggles/:id/comments`
+### `/numbers/1000`
 
 | Framework                   | Requests | Response Time | Requests/sec |
 |-----------------------------|----------|---------------|--------------|
-| [Hobbit][hobbit]            | 59352    | 30.73ms       | 329.73       |
-| [Camping][camping]          | 58510    | 25.38ms       | 325.05       |
-| [Cuba][cuba]                | 57968    | 28.49ms       | 322.03       |
-| [Crepe][crepe]              | 54267    | 4.79ms        | 301.37       |
-| [Sinatra][sinatra]          | 53252    | 30.93ms       | 295.83       |
-| [Grape][grape]              | 52289    | 35.21ms       | 290.48       |
-| [Rails::Metal][rails-metal] | 46612    | 38.74ms       | 258.94       |
-| [Rails::API][rails-api]     | 42185    | 42.85ms       | 234.34       |
-| [Rails][rails]              | 36886    | 48.73ms       | 204.91       |
+| [Hobbit][hobbit]            | 282693   | 16.24ms       | 1570.50      |
+| [Camping][camping]          | 262113   | 11.02ms       | 1456.18      |
+| [Cuba][cuba]                | 258000   | 11.29ms       | 1433.32      |
+| [Sinatra][sinatra]          | 204070   | 8.82ms        | 1133.53      |
+| [Crepe][crepe]              | 186288   | 20.36ms       | 1034.93      |
+| [Grape][grape]              | 174436   | 14.60ms       | 969.07       |
+| [Rails::Metal][rails-metal] | 102592   | 18.11ms       | 569.93       |
+| [Rails::API][rails-api]     | 58518    | 32.47ms       | 325.09       |
+| [Rails][rails]              | 56863    | 33.32ms       | 315.90       |
 
 ### System Information
 

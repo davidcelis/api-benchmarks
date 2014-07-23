@@ -1,13 +1,13 @@
 require File.expand_path('../config/environment.rb', __FILE__)
 Bundler.setup(:default, :rails)
 
-require 'rails/all'
+require 'rails'
+require 'action_controller/railtie'
 
-class Wiggles < Rails::Application
+class Benchmarks < Rails::Application
   routes.append do
-    resources :wiggles, only: [:show, :index] do
-      get :comments, on: :member, as: :wiggle_comments
-    end
+    get '/empty',          to: 'benchmarks#empty'
+    get '/numbers/:count', to: 'benchmarks#numbers'
   end
 
   config.cache_classes   = true
@@ -16,31 +16,18 @@ class Wiggles < Rails::Application
   config.secret_key_base = 'not_so_secret_key_base'
 end
 
-class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
-end
-
-class WigglesController < ApplicationController
-  respond_to :json
-
-  # GET /wiggles.json
-  def index
-    respond_with Wiggle.all
+class BenchmarksController < ActionController::Base
+  # GET /empty
+  def empty
+    render nothing: true
   end
 
-  # GET /wiggles/:id.json
-  def show
-    respond_with Wiggle.find(params[:id])
-  end
-
-  # GET /wiggles/:id/comments.json
-  def comments
-    respond_with Wiggle.find(params[:id]).comments
+  # GET /numbers/:count
+  def numbers
+    render json: (1..params[:count].to_i).to_a
   end
 end
 
-Wiggles.initialize!
+Benchmarks.initialize!
 
-run Wiggles
+run Benchmarks

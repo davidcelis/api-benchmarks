@@ -4,7 +4,7 @@ require 'lib/api/benchmark/table'
 module API
   class Benchmark
     FRAMEWORKS = Dir['*.ru'].map { |ru| Framework.new(ru.match(/(.+)\.ru/)[1]) }
-    PATHS = %w[/wiggles /wiggles/1 /wiggles/1/comments]
+    PATHS = %W[/empty /numbers/#{ENV['NUMBERS'] || 1000}]
 
     def initialize(*frameworks)
       @frameworks = frameworks
@@ -14,7 +14,7 @@ module API
       puts "Benchmarking #{@frameworks.first.pretty}..." unless @frameworks.size > 1
 
       PATHS.each do |path|
-        puts "\n### `#{path.sub(/\d+/, ':id')}`"
+        puts "\n### `#{path}`"
 
         table = API::Benchmark::Table.new
 

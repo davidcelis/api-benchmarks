@@ -2,24 +2,19 @@ require File.expand_path('../config/environment.rb', __FILE__)
 Bundler.setup(:default, :grape)
 require 'grape'
 
-class WigglesAPI < Grape::API
+class Benchmarks < Grape::API
   format :json
 
-  namespace :wiggles do
-    get do
-      Wiggle.all
-    end
+  get(:empty) { '' }
 
+  namespace :numbers do
     params do
-      requires :id, type: Integer, desc: 'Wiggle ID.'
+      requires :count, type: Integer, desc: 'How many numbers to render.'
     end
-    route_param :id do
-      get { Wiggle.find(params[:id]) }
-
-      get(:comments) { Wiggle.find(params[:id]).comments }
+    route_param :count do
+      get { (1..params[:count]).to_a }
     end
   end
 end
 
-use ActiveRecord::ConnectionAdapters::ConnectionManagement
-run WigglesAPI
+run Benchmarks

@@ -3,10 +3,9 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 # Constants.
-gem 'puma', '2.9.0'
-gem 'pg',   '0.17.1'
-gem 'json', '1.8.1'
-gem 'activerecord', '4.1.4', require: 'active_record'
+gem 'puma',          '2.9.0'
+gem 'json',          '1.8.1'
+gem 'activesupport', '4.1.4', require: 'active_support'
 
 # Utilities.
 gem 'terminal-table'

@@ -3,19 +3,10 @@ Bundler.setup(:default, :sinatra)
 
 require 'sinatra/base'
 
-class Wiggles < Sinatra::Base
-  get '/wiggles' do
-    Wiggle.all.to_json
-  end
+class Benchmarks < Sinatra::Base
+  get('/empty') { '' }
 
-  get '/wiggles/:id' do
-    Wiggle.find(params[:id]).to_json
-  end
-
-  get '/wiggles/:id/comments' do
-    Wiggle.find(params[:id]).comments.to_json
-  end
+  get('/numbers/:count') { (1..params[:count].to_i).to_a.to_json }
 end
 
-use ActiveRecord::ConnectionAdapters::ConnectionManagement
-run Wiggles
+run Benchmarks

@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/crepe/crepe.git
-  revision: 948420be967fc0f64f72a86d0830b490bd8c3ba5
+  revision: ee30b0d784a231c64560cbd46c6756f7d2d7107d
   specs:
     crepe (0.0.1.pre)
       activesupport (>= 4.0.0)
@@ -41,8 +41,6 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
-    binding_of_caller (0.7.2)
-      debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (2.7.0)
       columnize (~> 0.3)
@@ -56,7 +54,6 @@ GEM
     columnize (0.8.9)
     cuba (3.1.1)
       rack
-    debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
@@ -99,9 +96,8 @@ GEM
     minitest (5.4.0)
     multi_json (1.10.1)
     multi_xml (0.5.5)
-    nokogiri (1.6.2.1)
+    nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
-    pg (0.17.1)
     polyglot (0.3.5)
     posix-spawn (0.3.8)
     pry (0.10.0)
@@ -134,10 +130,7 @@ GEM
     pry-rescue (1.4.1)
       interception (>= 0.5)
       pry
-    pry-stack_explorer (0.4.9.1)
-      binding_of_caller (>= 0.7)
-      pry (>= 0.9.11)
-    pry-suite (1.1.0)
+    pry-suite (1.1.1)
       gist
       pry
       pry-byebug
@@ -148,7 +141,6 @@ GEM
       pry-macro
       pry-pretty-numeric
       pry-rescue
-      pry-stack_explorer
     puma (2.9.0)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
@@ -213,7 +205,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (= 4.1.4)
+  activesupport (= 4.1.4)
   camping (= 2.1.532)
   crepe!
   cuba (= 3.1.1)
@@ -221,7 +213,6 @@ DEPENDENCIES
   grape (= 0.8.0)
   hobbit (= 0.6.0)
   json (= 1.8.1)
-  pg (= 0.17.1)
   pry-suite
   puma (= 2.9.0)
   rails (= 4.1.4)

@@ -2,21 +2,18 @@ require File.expand_path('../config/environment.rb', __FILE__)
 Bundler.setup(:default, :crepe)
 require 'crepe'
 
-class WigglesAPI < Crepe::API
+class Benchmarks < Crepe::API
   respond_to :json
 
-  namespace :wiggles do
-    get { Wiggle.all }
+  get :empty
 
-    param :id do
-      let(:wiggle) { Wiggle.find(params[:id]) }
+  namespace :numbers do
+    param :count do
+      let(:numbers) { (1..params[:count].to_i).to_a }
 
-      get { wiggle }
-
-      get(:comments) { wiggle.comments }
+      get { numbers }
     end
   end
 end
 
-use ActiveRecord::ConnectionAdapters::ConnectionManagement
-run WigglesAPI
+run Benchmarks
